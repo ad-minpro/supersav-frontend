@@ -1,0 +1,58 @@
+<div data-ng-controller="CustomersCommonCtrl">
+  <md-toolbar class="md-primary md-hue-1 md-whiteframe-z2" md-whiteframe="2">
+    <div class="md-toolbar-tools" layout-fill>
+      <div >
+        <md-button class="md-raised" ui-sref="customers.new">Nouveau</md-button>
+      </div>
+
+      <span flex></span>
+      <md-input-container flex="30" class="md-icon-float md-block md-caption md-accent" style="padding-bottom: 0; margin-bottom: 0;">
+        <label>Recherchez un client</label>
+        <!--<md-icon class="name" style="color: grey;" md-svg-icon="/static/img/svg/ic_search_black_24px.svg"></md-icon>-->
+        <input type="text">
+      </md-input-container>
+    <span flex></span>
+
+      <div>
+        <md-button class="md-button md-raised" aria-label="More">
+          <md-icon md-svg-icon="/static/img/svg/ic_autorenew_black_24px.svg"></md-icon>
+        </md-button>
+        <md-button class="md-button md-raised" aria-label="More">
+          <md-icon md-svg-icon="/static/img/svg/ic_list_black_24px.svg"></md-icon>
+        </md-button>
+      </div>       
+    </div>
+  </md-toolbar>
+
+  <md-content layout="column" flex class="md-margin" layout-align="center center" layout-fill>
+
+          
+          <md-table-container layout-fill>
+            <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
+              <thead md-head md-order="query.order" md-on-reorder="getDesserts">
+                <tr md-row>
+                  <th md-column md-numeric>Pro</th>
+                  <th md-column md-numeric>Nom / Raison social</th>
+                  <th md-column md-numeric>Tél 1</th>
+                  <th md-column md-numeric>Tél 2</th>
+                  <th md-column md-numeric>Ville</th>
+                </tr>
+              </thead>
+              <tbody md-body>
+                <tr md-row md-select="item" md-select-id="id" md-auto-select ng-repeat="item in dataItems">
+                  <td md-cell>
+                    <md-button ng-show="item.professional" class="md-button md-icon-button md-warn" aria-label="More" ui-sref="customers.profile({id: item.id})">
+                      <md-icon md-svg-icon="/static/img/humans/business.svg"></md-icon>
+                    </md-button>                    
+                    <md-button ng-show="item.professional != true" class="md-button md-icon-button md-primary" aria-label="More" ui-sref="customers.profile({id: item.id})">
+                      <md-icon md-svg-icon="/static/img/humans/user.svg"></md-icon>
+                    </md-button>                     
+                  </td>
+                  <td md-cell>{{item.fullname}}</td>
+                  <td md-cell>{{item.phone_1}}</td>
+                  <td md-cell>{{item.phone_1}}</td>
+                  <td md-cell>{{item.town}}</td>
+                </tr>
+              </tbody>
+            </table>            
+          </md-table-container>

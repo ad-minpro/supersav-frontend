@@ -1,0 +1,177 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+md-sidenav, 
+md-sidenav.md-locked-open, 
+md-sidenav.md-closed.md-locked-open-add-active {
+    width: 272px;
+    min-width: 272px;
+    max-width: 272px;
+}
+
+md-grid-list {
+  margin: 8px; }
+
+
+
+md-grid-tile {
+  transition: all 400ms erase-out 50ms; }
+
+md-icon svg {
+  fill: inherit;
+}
+
+
+
+.icon-white {
+  color: white; 
+}
+
+md-sidenav {
+  fill: #737373;
+  ng-md-icon {
+    position: relative;
+    top: 5px; // adjust for svg viewbox
+  }
+}
+
+md-content.md-default-theme {
+  background-color: #eee;
+}
+
+.border-r {
+	border-right: 1px solid #dddee0;
+}
+
+/*
+md-content {
+	height: 100%;
+}
+*/
+
+.back-light {
+	background-color: #EFEFEF;
+}
+
+md-content.back-light > md-subheader {
+	/* background-color: #f8f8f8; */
+	/* background-color: #EFEFEF; */
+	background-color: #b5b5b5;
+}
+
+.my_badge {
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
+}
+
+.classic_badge {
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 10;
+    line-height: 1;
+    color: grey;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid silver;
+    opacity: 0.5;
+}
+
+.indigo {
+  background: #3f51b5; }
+
+.cyan {
+  background: #00bcd4; }
+
+.lime {
+  background: #cddc39; }
+
+.grey {
+  background: #9e9e9e; }
+
+.green {
+  background: #8bc34a; }
+
+.yellow {
+  background: #ffeb3b; }
+
+.blue {
+  background: #2196f3; }
+
+.orange {
+  background: #FF5722; }
+
+.purple {
+  background: #9c27b0; }
+
+.red {
+  background: #f44336; }
+
+.white {
+  background: #fff; 
+  border: 1px solid silver; 
+}
+
+.indigo-font { color: #3f51b5; }
+.cyan-font { color: #00bcd4; }
+.lime-font { color: #cddc39; }
+.grey-font { color: #9e9e9e; }
+.green-font { color: #8bc34a; }
+.yellow-font { color: #ffeb3b; }
+.blue-font { color: #2196f3; }
+.orange-font { color: #FF5722; }
+.purple-font { color: #9c27b0; }
+.red-font { color: #f44336; }
+.white-font { color: #fff; }
+
+.no-margin {
+  margin: 0px;
+}
+
+.big-numbers {
+  color: white;
+  text-align: center center;
+  font-family: 'Oswald', sans-serif;
+}
+
+.white .big-numbers {
+  color: grey;
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.white-font { color: #fff; }
+
+.font2 {
+  color: white;
+  text-align: center center;
+  font-family: 'Oswald', sans-serif;
+}
+
+.bg-logo {
+  background-image: url('/static/img/logo.png'); 
+  min-height: 128px;
+}
+
+.md-list-active {
+  color: white;
+  background-color: silver;
+}
