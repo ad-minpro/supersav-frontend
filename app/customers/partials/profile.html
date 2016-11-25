@@ -1,7 +1,7 @@
-<div flex data-ng-controller="CustomersProfileCtrl" ng-cloak>
+<div flex layout-fill data-ng-controller="CustomersProfileCtrl" layout="column">
   <!-- TOOLBAR -->
-  <md-toolbar class="md-primary md-hue-1 md-whiteframe-z2" md-whiteframe="2">
-    <div class="md-toolbar-tools">
+  <header layout-align="space-between" class="header-content">
+    <div class="md-toolbar-tools" layout-fill>
       <div >
         <md-button class="md-raised md-button" ui-sref="customers.main">
           <md-icon md-svg-icon="/static/img/svg/ic_arrow_back_black_24px.svg"></md-icon>
@@ -25,20 +25,29 @@
         </md-button>
       </div>       
     </div>
-  </md-toolbar>
+  </header>
   <!-- CONTENT -->
-  <md-content layout="row" layout-fill style="background-color: yellow;">
+<div layout="column" layout-fill flex class="back-light">
+  <div flex="5"></div>
+  <div flex layout="row">
+    <div flex="10" class="back-light"></div>
+    <md-card flex>
+      <md-card-title>    
+        <md-card-title-text>
+          <span class="md-headline" ng-if="data.professional">{{data.corporate_name}}</span>
+          <span class="md-headline" ng-if="data.professional != true">{{data.fullname}}</span>          
+        </md-card-title-text>
+      </md-card-title>    
+      <md-card-content layout="row" layout-fill>
     <!-- LIST -->
-    <div layout="row" flex="20" layout-fill style="background-color: red;">
+    <div layout="row" flex="20" class="border-r">
 
-      <md-content flex class="border-r back-light">
         <md-list flex>
           <md-list-item>
-              <h3 ng-if="data.professional">{{data.corporate_name}}</h3>
-              <h3 ng-if="data.professional != true">{{data.fullname}}</h3>
+
           </md-list-item>         
           <md-divider ></md-divider>
-          <md-subheader class="md-no-sticky back-light">Coordonnées</md-subheader>
+          <md-subheader>Coordonnées</md-subheader>
           <md-list-item>
           <md-button class="md-icon-button md-mini" aria-label="More">
             <md-icon md-svg-icon="/static/img/svg/ic_phone_black_24px.svg"></md-icon>
@@ -71,7 +80,7 @@
             </div>
           </md-list-item>  
           <md-divider ></md-divider>
-          <md-subheader class="md-no-sticky back-light">Notifications</md-subheader>
+          <md-subheader>Notifications</md-subheader>
           <md-list-item>
              <md-icon class="md-warn" md-svg-icon="/static/img/svg/ic_textsms_black_24px.svg"></md-icon>
              <span flex>sms</span>
@@ -88,14 +97,13 @@
               Créé le {{data.added | date : 'dd/MM/yyyy à hh:mm'}}<br>
               Modifié le {{data.updated | date : 'dd/MM/yyyy à hh:mm'}}
             </p>
-          </md-list-item>
-          <md-divider ></md-divider>                                
+          </md-list-item>                               
         </md-list>
-      </md-content>
+
     </div>     
     <!-- TABS -->
-    <div layout="row" flex layout-fill>
-      <md-content layout-fill>
+    <div layout="row" flex >
+      <div layout-fill>
         <md-tabs md-dynamic-height md-border-bottom>
           <md-tab label="Dossiers en cours">
             <md-content class="md-padding">
@@ -113,7 +121,15 @@
             </md-content>
           </md-tab>
         </md-tabs>
-      </md-content>      
+      </div>      
     </div>
-  </md-content>
+      </md-card-content>
+    </md-card>
+    <div flex="10"></div>
+  </div>
+  <div flex="5"></div>
+</div>
+
+
+
 </div>

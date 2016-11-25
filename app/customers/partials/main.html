@@ -1,12 +1,12 @@
 <div data-ng-controller="CustomersCommonCtrl">
-  <md-toolbar class="md-primary md-hue-1 md-whiteframe-z2" md-whiteframe="2">
+  <header layout-align="space-between" class="header-content">
     <div class="md-toolbar-tools" layout-fill>
       <div >
         <md-button class="md-raised" ui-sref="customers.new">Nouveau</md-button>
       </div>
 
       <span flex></span>
-      <md-input-container flex="30" class="md-icon-float md-block md-caption md-accent" style="padding-bottom: 0; margin-bottom: 0;">
+      <md-input-container flex="30" class="md-icon-float md-block md-caption md-warn" style="padding-bottom: 0; margin-bottom: 0;">
         <label>Recherchez un client</label>
         <!--<md-icon class="name" style="color: grey;" md-svg-icon="/static/img/svg/ic_search_black_24px.svg"></md-icon>-->
         <input type="text">
@@ -22,7 +22,7 @@
         </md-button>
       </div>       
     </div>
-  </md-toolbar>
+  </header>
 
   <md-content layout="column" flex class="md-margin" layout-align="center center" layout-fill>
 

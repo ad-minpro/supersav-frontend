@@ -175,3 +175,9 @@ md-content.back-light > md-subheader {
   color: white;
   background-color: silver;
 }
+
+.header-content {
+  background-color: #eee; 
+  border-bottom: 1px solid silver; 
+  height: 80px;
+}
