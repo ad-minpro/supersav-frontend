@@ -29,75 +29,71 @@
             </md-button> 
           </div>
           <!--<h1 class="md-toolbar-tools">#SuperApp</h1>-->
-          <!--<img src="/static/img/logo.png">-->
-         
         </md-toolbar>
         <md-content>
+          <md-list flex>
+            <md-list-item ng-click="null" ui-sref="dashboard" ui-sref-active="md-list-active">
+              <md-icon md-font-set="material-icons">dashboard</md-icon>
+              <span flex class="md-caption">Tableau de bord</span>
+            </md-list-item>
 
+            <md-divider ></md-divider> 
+            <md-list-item ng-click="null" ui-sref-active="md-list-active">          
+              <md-icon md-font-set="material-icons">whatshot</md-icon>
+              <span flex class="md-caption">Activité</span>
+            </md-list-item>
+            <md-list-item ng-click="null" ui-sref-active="md-list-active">          
+              <md-icon md-font-set="material-icons">mood</md-icon>
+              <span flex class="md-caption">Feedback client</span>
+            </md-list-item>
 
-            <md-list flex>
-              <md-list-item ng-click="null" ui-sref="dashboard" ui-sref-active="md-list-active">
-                <md-icon md-font-set="material-icons">dashboard</md-icon>
-                <span flex class="md-caption">Tableau de bord</span>
-              </md-list-item>
+            <md-divider ></md-divider> 
+            <md-list-item ng-click="null" ui-sref="tickets.new" ui-sref-active="md-list-active">
+              <span flex class="md-caption">Tickets</span>
+              <!--<b class="badge bg-info m-l-xs">23</b>-->
+              <b class="my_badge orange">24</b>
 
-              <md-divider ></md-divider> 
-              <md-list-item ng-click="null" ui-sref-active="md-list-active">          
-                <md-icon md-font-set="material-icons">whatshot</md-icon>
-                <span flex class="md-caption">Activité</span>
-              </md-list-item>
-              <md-list-item ng-click="null" ui-sref-active="md-list-active">          
-                <md-icon md-font-set="material-icons">mood</md-icon>
-                <span flex class="md-caption">Feedback client</span>
-              </md-list-item>
+            </md-list-item> 
+            <md-list-item ng-click="null" ui-sref="customers.main" ui-sref-active="md-list-active">
+              <span class="md-caption">Clients</span>
+            </md-list-item>              
+            <md-divider ></md-divider>
 
-              <md-divider ></md-divider> 
-              <md-list-item ng-click="null" ui-sref="tickets.new" ui-sref-active="md-list-active">
-                <span flex class="md-caption">Tickets</span>
-                <!--<b class="badge bg-info m-l-xs">23</b>-->
-                <b class="my_badge orange">24</b>
+            <md-subheader class="md-no-sticky">Partenaires</md-subheader>
+            <md-list-item ng-click="null" ui-sref-active="md-list-active">
+              <span class="md-caption">Contacts</span> 
+            </md-list-item>          
+            <md-list-item ng-click="null" ui-sref-active="md-list-active">
+              <span class="md-caption">Procédures</span> 
+            </md-list-item>
+            <md-divider ></md-divider>
 
-              </md-list-item> 
-              <md-list-item ng-click="null" ui-sref="customers.main" ui-sref-active="md-list-active">
-                <span class="md-caption">Clients</span>
-              </md-list-item>              
-              <md-divider ></md-divider>
-
-              <md-subheader class="md-no-sticky">Partenaires</md-subheader>
-              <md-list-item ng-click="null" ui-sref-active="md-list-active">
-                <span class="md-caption">Contacts</span> 
-              </md-list-item>          
-              <md-list-item ng-click="null" ui-sref-active="md-list-active">
-                <span class="md-caption">Procédures</span> 
-              </md-list-item>
-              <md-divider ></md-divider>
-
-              <md-list-item ng-click="null" ui-sref-active="md-list-active">          
-                <md-icon md-font-set="material-icons">assignment_late</md-icon>
-                <span flex class="md-caption">Notifications</span>
-                <b class="my_badge md-warn">2</b>
-              </md-list-item>
-              <md-list-item ng-click="null" ui-sref-active="md-list-active">
-                <md-icon md-font-set="material-icons">chat</md-icon>
-                <span flex class="md-caption">Messagerie</span>
-                <b class="my_badge md-warn">1</b>
-              </md-list-item>
-              <md-list-item ng-click="null" ui-sref-active="md-list-active">
-                <md-icon md-font-set="material-icons">assignment</md-icon>
-                <span flex class="md-caption">ToDo</span>
-                <b class="my_badge md-warn">8</b>    
-              </md-list-item>
-              <md-list-item ng-click="null" ui-sref-active="md-list-active">
-                <md-icon md-font-set="material-icons">event</md-icon>
-                <span flex class="md-caption">Agenda</span>
-              </md-list-item>
-              <md-divider ></md-divider>
-              <md-list-item ng-click="null" ui-sref-active="md-list-active">
-                <md-icon md-font-set="material-icons">free_breakfast</md-icon>
-                <span flex class="md-caption">Pause café</span>
-              </md-list-item>            
-              <md-divider ></md-divider>           
-            </md-list flex>
+            <md-list-item ng-click="null" ui-sref-active="md-list-active">          
+              <md-icon md-font-set="material-icons">assignment_late</md-icon>
+              <span flex class="md-caption">Notifications</span>
+              <b class="my_badge md-warn">2</b>
+            </md-list-item>
+            <md-list-item ng-click="null" ui-sref-active="md-list-active">
+              <md-icon md-font-set="material-icons">chat</md-icon>
+              <span flex class="md-caption">Messagerie</span>
+              <b class="my_badge md-warn">1</b>
+            </md-list-item>
+            <md-list-item ng-click="null" ui-sref-active="md-list-active">
+              <md-icon md-font-set="material-icons">assignment</md-icon>
+              <span flex class="md-caption">ToDo</span>
+              <b class="my_badge md-warn">8</b>    
+            </md-list-item>
+            <md-list-item ng-click="null" ui-sref-active="md-list-active">
+              <md-icon md-font-set="material-icons">event</md-icon>
+              <span flex class="md-caption">Agenda</span>
+            </md-list-item>
+            <md-divider ></md-divider>
+            <md-list-item ng-click="null" ui-sref-active="md-list-active">
+              <md-icon md-font-set="material-icons">free_breakfast</md-icon>
+              <span flex class="md-caption">Pause café</span>
+            </md-list-item>            
+            <md-divider ></md-divider>           
+          </md-list flex>
         </md-content>
       </md-sidenav>
 
@@ -107,7 +103,7 @@
         <md-toolbar class="md-whiteframe-z2">
           <div class="md-toolbar-tools">
             <md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Settings" hide-gt-md="">
-              <md-icon md-svg-icon="/static/img/ic_menu_24px.svg"></md-icon>
+              <md-icon md-font-set="material-icons">menu</md-icon>
             </md-button>
             <h2>
               <span>{{page.title}}</span>
@@ -117,7 +113,7 @@
             <md-fab-speed-dial md-open="false" md-direction="left" ng-class="md-scale" class="md-scale md-hover-full md-fab-center-right">
               <md-fab-trigger>
                 <md-button aria-label="menu" class="md-icon-button">
-                  <md-icon md-font-set="material-icons white-font">more_vert</md-icon>
+                  <md-icon md-font-set="material-icons">more_vert</md-icon>
                 </md-button>
               </md-fab-trigger>
               <md-fab-actions>
@@ -135,9 +131,9 @@
             
             <!-- account / profile -->
             <md-button class="md-icon-button" aria-label="Favorite">
-              <md-icon md-font-set="material-icons white-font">account_circle</md-icon>
+              <md-icon md-font-set="material-icons">account_circle</md-icon>
             </md-button>
-            <span class="white-font"><small>Valence Nord</small></span>
+            <span class=""><small>Valence Nord</small></span>
           </div>
         </md-toolbar>
 

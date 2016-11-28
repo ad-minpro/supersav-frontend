@@ -4,7 +4,7 @@
     <div class="md-toolbar-tools" layout-fill>
       <div >
         <md-button class="md-raised md-button" ui-sref="customers.main">
-          <md-icon md-svg-icon="/static/img/svg/ic_arrow_back_black_24px.svg"></md-icon>
+          <md-icon md-font-set="material-icons">arrow_back</md-icon>
         </md-button>
       </div>
 
@@ -13,10 +13,10 @@
 
       <div>
         <md-button class="md-button md-raised" aria-label="More">
-          <md-icon md-svg-icon="/static/img/svg/ic_autorenew_black_24px.svg"></md-icon>
+          <md-icon md-font-set="material-icons">autorenew</md-icon>
         </md-button>
         <md-button class="md-button md-raised" aria-label="More">
-          <md-icon md-svg-icon="/static/img/svg/ic_create_black_24px.svg"></md-icon>
+          <md-icon md-font-set="material-icons">create</md-icon>
         </md-button>
       </div>       
     </div>
@@ -30,7 +30,7 @@
 
       <md-card-header>
         <md-card-avatar>
-          <md-icon class="md-user-avatar" md-svg-icon="/static/img/svg/ic_create_black_24px.svg"></md-icon>
+          <md-icon class="md-user-avatar" md-font-set="material-icons">create</md-icon>
         </md-card-avatar>
         <md-card-header-text ng-if="data.professional">
           <span class="md-title">{{data.corporate_name}}</span>
@@ -59,26 +59,26 @@
                 <md-subheader>Coordonnées</md-subheader>
                 <md-list-item>
                   <md-button class="md-icon-button md-mini" aria-label="More">
-                    <md-icon md-svg-icon="/static/img/svg/ic_phone_black_24px.svg"></md-icon>
+                    <md-icon md-font-set="material-icons">phone</md-icon>
                   </md-button>          
                   <span flex> {{data.phone_1}} </span>
                 </md-list-item>
                 <md-list-item>
                 <md-button class="md-icon-button md-mini" aria-label="More">
-                  <md-icon md-svg-icon="/static/img/svg/ic_smartphone_black_24px.svg"></md-icon>
+                  <md-icon md-font-set="material-icons">smartphone</md-icon>
                 </md-button>           
                   <span flex> {{data.phone_2}} </span>
                 </md-list-item>
                 <md-list-item>
                 <md-button class="md-icon-button md-mini" aria-label="More">
-                  <md-icon md-svg-icon="/static/img/svg/ic_email_black_24px.svg"></md-icon>
+                  <md-icon md-font-set="material-icons">email</md-icon>
                 </md-button>          
                   <span flex> {{data.email}} </span>
                 </md-list-item>     
 
                 <md-list-item class="md-3-line">
                 <md-button class="md-icon-button md-mini" aria-label="More">
-                  <md-icon md-svg-icon="/static/img/svg/ic_place_black_24px.svg"></md-icon>
+                  <md-icon md-font-set="material-icons">place</md-icon>
                 </md-button>          
                   <div class="md-list-item-text" layout="column">
                   <p>
@@ -91,12 +91,12 @@
                 <md-divider ></md-divider>
                 <md-subheader>Notifications</md-subheader>
                 <md-list-item>
-                   <md-icon class="md-warn" md-svg-icon="/static/img/svg/ic_textsms_black_24px.svg"></md-icon>
+                   <md-icon class="md-warn" md-font-set="material-icons">textsms</md-icon>
                    <span flex>sms</span>
                   <md-switch class="md-primary" ng-model="data.send_sms"></md-switch>
                 </md-list-item>
                 <md-list-item>
-                   <md-icon class="md-warn" md-svg-icon="/static/img/svg/ic_email_black_24px.svg"></md-icon>
+                   <md-icon class="md-warn" md-font-set="material-icons">email</md-icon>
                    <span flex>email</span>
                     <md-switch class="md-primary" ng-model="data.send_email"></md-switch>
                 </md-list-item>        
