@@ -7,6 +7,16 @@ myapp.controller('CustomersCommonCtrl', function($scope, $rootScope, CustomersSe
 		console.log(data.results);
 	});
 
+	$scope.query = {
+		order: 'fullname',
+		limit: 5,
+		page: 1
+	};
+
+	$scope.logOrder = function (order) {
+		console.log('order: ', order);
+	};
+
 });
 
 myapp.controller('CustomersProfileCtrl', function($scope, $rootScope, $stateParams, CustomersService){

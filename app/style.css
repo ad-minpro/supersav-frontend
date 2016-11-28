@@ -186,11 +186,17 @@ md-content.back-light > md-subheader {
   background-color: #eee; 
   border-bottom: 1px solid silver; 
   height: 80px;
+  min-height: 80px;
+  max-height: 80px;
 }
 
 
 md-input-container>md-icon {
-    color: silver;
+    color: grey;
+}
+
+md-input-container>label {
+    color: grey;
 }
 
 md-tabs {

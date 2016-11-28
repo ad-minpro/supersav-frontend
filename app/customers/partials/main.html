@@ -6,10 +6,10 @@
       </div>
 
       <span flex></span>
-      <md-input-container flex="30" class="md-icon-float md-block md-caption md-warn" style="padding-bottom: 0; margin-bottom: 0;">
+      <md-input-container flex="30" class="md-icon-float md-icon-left md-block md-caption" style="padding-bottom: 0; margin-bottom: 0;">
+        <md-icon md-font-set="material-icons">search</md-icon>
         <label>Recherchez un client</label>
-        <!--<md-icon class="name" style="color: grey;" md-svg-icon="/static/img/svg/ic_search_black_24px.svg"></md-icon>-->
-        <input type="text">
+        <input type="text" ng-model="filter.search">
       </md-input-container>
     <span flex></span>
 
@@ -31,15 +31,15 @@
             <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
               <thead md-head md-order="query.order" md-on-reorder="getDesserts">
                 <tr md-row>
-                  <th md-column md-numeric>Pro</th>
-                  <th md-column md-numeric>Nom / Raison social</th>
+                  <th md-column md-order-by="professional">Pro</th>
+                  <th md-column md-order-by="fullname">Nom / Raison social</th>
                   <th md-column md-numeric>Tél 1</th>
                   <th md-column md-numeric>Tél 2</th>
-                  <th md-column md-numeric>Ville</th>
+                  <th md-column md-order-by="town">Ville</th>
                 </tr>
               </thead>
               <tbody md-body>
-                <tr md-row md-select="item" md-select-id="id" md-auto-select ng-repeat="item in dataItems">
+                <tr md-row md-select="item" md-select-id="id" md-auto-select ng-repeat="item in dataItems | filter: filter.search | orderBy: query.order">
                   <td md-cell>
                     <md-button ng-show="item.professional" class="md-button md-icon-button md-warn" aria-label="More" ui-sref="customers.profile({id: item.id})">
                       <md-icon md-svg-icon="/static/img/humans/business.svg"></md-icon>
