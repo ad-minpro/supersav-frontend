@@ -128,6 +128,11 @@ md-content.back-light > md-subheader {
   border: 1px solid silver; 
 }
 
+.fuse {
+  background: #2D323E;
+  color: #fff;
+}
+
 .indigo-font { color: #3f51b5; }
 .cyan-font { color: #00bcd4; }
 .lime-font { color: #cddc39; }
@@ -180,4 +185,9 @@ md-content.back-light > md-subheader {
   background-color: #eee; 
   border-bottom: 1px solid silver; 
   height: 80px;
+}
+
+
+md-input-container>md-icon {
+    color: silver;
 }
