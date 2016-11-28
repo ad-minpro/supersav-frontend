@@ -23,8 +23,11 @@
 
       <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-disable-backdrop="">
         <md-toolbar class="md-primary">
-          <div class="bg-logo" layout="column" layout-align="end end" ng-controller="LeftCtrl">
-            <md-button class="md-mini md-icon-button md-primary md-hue-1" ng-click="close()" aria-label="Use Android">
+          <div class="bg-logo" layout="row" layout-align="end end" ng-controller="LeftCtrl">
+            <md-button class="md-mini md-icon-button md-primary md-hue-3" ui-sref="tickets.new" aria-label="Nouveau ticket">
+              <md-icon md-font-set="material-icons">add</md-icon>
+            </md-button>              
+            <md-button class="md-mini md-icon-button md-primary md-hue-1" ng-click="close()" aria-label="Fermer">
               <md-icon md-font-set="material-icons">close</md-icon>
             </md-button> 
           </div>
