@@ -144,6 +144,7 @@ md-content.back-light > md-subheader {
 .purple-font { color: #9c27b0; }
 .red-font { color: #f44336; }
 .white-font { color: #fff; }
+.silver-font { color: silver; }
 
 .no-margin {
   margin: 0px;
@@ -191,3 +192,16 @@ md-content.back-light > md-subheader {
 md-input-container>md-icon {
     color: silver;
 }
+
+md-tabs {
+  padding-top: 10px; 
+}
+
+md-tab-content {
+  margin: 10px; 
+}
+/*
+md-tab-content {
+  margin: 25px; 
+}
+*/

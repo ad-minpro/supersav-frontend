@@ -8,13 +8,8 @@
         </md-button>
       </div>
 
+
       <span flex></span>
-      <md-input-container flex="30" class="md-icon-float md-block md-caption md-accent" style="padding-bottom: 0; margin-bottom: 0;">
-        <label>Recherchez un client</label>
-        <!--<md-icon class="name" style="color: grey;" md-svg-icon="/static/img/svg/ic_search_black_24px.svg"></md-icon>-->
-        <input type="text">
-      </md-input-container>
-    <span flex></span>
 
       <div>
         <md-button class="md-button md-raised" aria-label="More">
@@ -30,81 +25,90 @@
 <div layout="column" layout-fill flex class="back-light">
   <div flex="5"></div>
   <div flex layout="row">
-    <div flex="10" class="back-light"></div>
+    <div flex="10"></div>
     <md-card flex>
-      <md-card-title>    
-        <md-card-title-text>
-          <span class="md-headline" ng-if="data.professional">{{data.corporate_name}}</span>
-          <span class="md-headline" ng-if="data.professional != true">{{data.fullname}}</span>          
-        </md-card-title-text>
-      </md-card-title>    
+
+      <md-card-header>
+        <md-card-avatar>
+          <md-icon class="md-user-avatar" md-svg-icon="/static/img/svg/ic_create_black_24px.svg"></md-icon>
+        </md-card-avatar>
+        <md-card-header-text ng-if="data.professional">
+          <span class="md-title">{{data.corporate_name}}</span>
+          <span class="md-subhead">{{data.fullname}}</span>
+        </md-card-header-text>
+        <md-card-header-text ng-if="data.professional != true">
+          <span class="md-title">{{data.fullname}}</span>
+          <span class="md-subhead">particulier</span>
+        </md-card-header-text>    
+      </md-card-header>
+      <!--
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card with image</span>
+            <span class="md-subhead">Extra Large</span>
+          </md-card-title-text>
+        </md-card-title>
+      -->
       <md-card-content layout="row" layout-fill>
-    <!-- LIST -->
-    <div layout="row" flex="20" class="border-r">
+      
+        <br>
+        <md-tabs md-border-bottom layout-fill>
+          <md-tab label="Profile">
+            <md-content>
+              <md-list flex>
+                <md-subheader>Coordonnées</md-subheader>
+                <md-list-item>
+                  <md-button class="md-icon-button md-mini" aria-label="More">
+                    <md-icon md-svg-icon="/static/img/svg/ic_phone_black_24px.svg"></md-icon>
+                  </md-button>          
+                  <span flex> {{data.phone_1}} </span>
+                </md-list-item>
+                <md-list-item>
+                <md-button class="md-icon-button md-mini" aria-label="More">
+                  <md-icon md-svg-icon="/static/img/svg/ic_smartphone_black_24px.svg"></md-icon>
+                </md-button>           
+                  <span flex> {{data.phone_2}} </span>
+                </md-list-item>
+                <md-list-item>
+                <md-button class="md-icon-button md-mini" aria-label="More">
+                  <md-icon md-svg-icon="/static/img/svg/ic_email_black_24px.svg"></md-icon>
+                </md-button>          
+                  <span flex> {{data.email}} </span>
+                </md-list-item>     
 
-        <md-list flex>
-          <md-list-item>
-
-          </md-list-item>         
-          <md-divider ></md-divider>
-          <md-subheader>Coordonnées</md-subheader>
-          <md-list-item>
-          <md-button class="md-icon-button md-mini" aria-label="More">
-            <md-icon md-svg-icon="/static/img/svg/ic_phone_black_24px.svg"></md-icon>
-          </md-button>          
-            <span flex> {{data.phone_1}} </span>
-          </md-list-item>
-          <md-list-item>
-          <md-button class="md-icon-button md-mini" aria-label="More">
-            <md-icon md-svg-icon="/static/img/svg/ic_smartphone_black_24px.svg"></md-icon>
-          </md-button>           
-            <span flex> {{data.phone_2}} </span>
-          </md-list-item>
-          <md-list-item>
-          <md-button class="md-icon-button md-mini" aria-label="More">
-            <md-icon md-svg-icon="/static/img/svg/ic_email_black_24px.svg"></md-icon>
-          </md-button>          
-            <span flex> {{data.email}} </span>
-          </md-list-item>     
-
-          <md-list-item class="md-3-line">
-          <md-button class="md-icon-button md-mini" aria-label="More">
-            <md-icon md-svg-icon="/static/img/svg/ic_place_black_24px.svg"></md-icon>
-          </md-button>          
-            <div class="md-list-item-text" layout="column">
-            <p>
-                    {{data.address}}<br>
-                    {{data.zipcode}} {{data.town}}<br>
-                    {{data.country}}
-            </p>
-            </div>
-          </md-list-item>  
-          <md-divider ></md-divider>
-          <md-subheader>Notifications</md-subheader>
-          <md-list-item>
-             <md-icon class="md-warn" md-svg-icon="/static/img/svg/ic_textsms_black_24px.svg"></md-icon>
-             <span flex>sms</span>
-            <md-switch class="md-primary" ng-model="data.send_sms"></md-switch>
-          </md-list-item>
-          <md-list-item>
-             <md-icon class="md-warn" md-svg-icon="/static/img/svg/ic_email_black_24px.svg"></md-icon>
-             <span flex>email</span>
-              <md-switch class="md-primary" ng-model="data.send_email"></md-switch>
-          </md-list-item>        
-          <md-divider ></md-divider>
-          <md-list-item >
-            <p class="md-caption">
-              Créé le {{data.added | date : 'dd/MM/yyyy à hh:mm'}}<br>
-              Modifié le {{data.updated | date : 'dd/MM/yyyy à hh:mm'}}
-            </p>
-          </md-list-item>                               
-        </md-list>
-
-    </div>     
-    <!-- TABS -->
-    <div layout="row" flex >
-      <div layout-fill>
-        <md-tabs md-dynamic-height md-border-bottom>
+                <md-list-item class="md-3-line">
+                <md-button class="md-icon-button md-mini" aria-label="More">
+                  <md-icon md-svg-icon="/static/img/svg/ic_place_black_24px.svg"></md-icon>
+                </md-button>          
+                  <div class="md-list-item-text" layout="column">
+                  <p>
+                          {{data.address}}<br>
+                          {{data.zipcode}} {{data.town}}<br>
+                          {{data.country}}
+                  </p>
+                  </div>
+                </md-list-item>  
+                <md-divider ></md-divider>
+                <md-subheader>Notifications</md-subheader>
+                <md-list-item>
+                   <md-icon class="md-warn" md-svg-icon="/static/img/svg/ic_textsms_black_24px.svg"></md-icon>
+                   <span flex>sms</span>
+                  <md-switch class="md-primary" ng-model="data.send_sms"></md-switch>
+                </md-list-item>
+                <md-list-item>
+                   <md-icon class="md-warn" md-svg-icon="/static/img/svg/ic_email_black_24px.svg"></md-icon>
+                   <span flex>email</span>
+                    <md-switch class="md-primary" ng-model="data.send_email"></md-switch>
+                </md-list-item>        
+                <md-divider ></md-divider>
+                <md-list-item >
+                  <p class="md-caption silver-font">
+                    Créé le {{data.added | date : 'dd/MM/yyyy à hh:mm'}}, dernière modification le {{data.updated | date : 'dd/MM/yyyy à hh:mm'}}
+                  </p>
+                </md-list-item>                               
+              </md-list>
+            </md-content>
+          </md-tab>        
           <md-tab label="Dossiers en cours">
             <md-content class="md-padding">
               <p>Liste des dossiers SAV en cours</p>
@@ -121,8 +125,8 @@
             </md-content>
           </md-tab>
         </md-tabs>
-      </div>      
-    </div>
+    
+
       </md-card-content>
     </md-card>
     <div flex="10"></div>

@@ -11,6 +11,7 @@ myapp.controller('CustomersCommonCtrl', function($scope, $rootScope, CustomersSe
 
 myapp.controller('CustomersProfileCtrl', function($scope, $rootScope, $stateParams, CustomersService){
 	var id = $stateParams.id;
+	$rootScope.page.title = 'Clients';
 
 	//$scope.customer = CustomersService.get({id: 31});
 	CustomersService.getData(function(data){
