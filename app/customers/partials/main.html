@@ -2,7 +2,7 @@
   <header layout-align="space-between" class="header-content">
     <div class="md-toolbar-tools" layout-fill>
       <div >
-        <md-button class="md-raised" ui-sref="customers.new">Nouveau</md-button>
+        <md-button class="md-raised" ui-sref="customers.new" aria-label="Nouveau">Nouveau</md-button>
       </div>
 
       <span flex></span>
@@ -14,10 +14,10 @@
     <span flex></span>
 
       <div>
-        <md-button class="md-button md-raised" aria-label="More">
+        <md-button class="md-button md-raised" aria-label="Recharger">
           <md-icon md-font-set="material-icons">autorenew</md-icon>
         </md-button>
-        <md-button class="md-button md-raised" aria-label="More">
+        <md-button class="md-button md-raised" aria-label="Liste">
           <md-icon md-font-set="material-icons">list</md-icon>
         </md-button>
       </div>       
@@ -26,7 +26,7 @@
 
   <md-content layout="column" flex class="md-margin" layout-align="center center" layout-fill> 
     <md-table-container layout-fill>
-      <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
+      <table md-table>
         <thead md-head md-order="query.order" md-on-reorder="getDesserts">
           <tr md-row>
             <th md-column md-order-by="professional">Pro</th>
@@ -37,14 +37,10 @@
           </tr>
         </thead>
         <tbody md-body>
-          <tr md-row md-select="item" md-select-id="id" md-auto-select ng-repeat="item in dataItems | filter: filter.search | orderBy: query.order">
+          <tr md-row md-select="item" md-select-id="id" md-auto-select ng-repeat="item in dataItems | filter: filter.search | orderBy: query.order" ui-sref="customers.profile({id: item.id})">
             <td md-cell>
-              <md-button ng-show="item.professional" class="md-button md-icon-button md-warn" aria-label="More" ui-sref="customers.profile({id: item.id})">
-                <md-icon md-svg-icon="/static/img/humans/business.svg"></md-icon>
-              </md-button>                    
-              <md-button ng-show="item.professional != true" class="md-button md-icon-button md-primary" aria-label="More" ui-sref="customers.profile({id: item.id})">
-                <md-icon md-svg-icon="/static/img/humans/user.svg"></md-icon>
-              </md-button>                     
+              <md-icon ng-show="item.professional" class="md-button md-icon-button md-warn" md-svg-icon="/static/img/humans/business.svg"></md-icon>
+              <md-icon ng-show="!item.professional" class="md-button md-icon-button md-primary"  md-svg-icon="/static/img/humans/user.svg"></md-icon>
             </td>
             <td md-cell>{{item.fullname}}</td>
             <td md-cell>{{item.phone_1}}</td>
