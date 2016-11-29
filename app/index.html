@@ -51,10 +51,10 @@
             </md-list-item>
 
             <md-divider ></md-divider> 
-            <md-list-item ng-click="null" ui-sref="tickets.new" ui-sref-active="md-list-active">
+            <md-list-item ng-click="null" ui-sref="tickets.list" ui-sref-active="md-list-active">
               <span flex class="md-caption">Tickets</span>
               <!--<b class="badge bg-info m-l-xs">23</b>-->
-              <b class="my_badge orange">24</b>
+              <b class="my_badge orange">3</b>
 
             </md-list-item> 
             <md-list-item ng-click="null" ui-sref="customers.main" ui-sref-active="md-list-active">
@@ -193,10 +193,12 @@
   <script src="/common/controllers/common.js"></script>
   <script src="/dashboard/controllers/dashboard.js"></script>
   <script src="/customers/controllers/common.js"></script>
+  <script src="/tickets/controllers/common.js"></script>
   <script src="/todo/controllers/todo.js"></script>
 
   <!-- Services -->
   <script src="/customers/services/customers.js"></script>
+  <script src="/tickets/services/tickets.js"></script>
 
   
 

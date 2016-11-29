@@ -1,0 +1,63 @@
+<div data-ng-controller="TicketsCommonCtrl">
+  <header layout-align="space-between" class="header-content">
+    <div class="md-toolbar-tools" layout-fill>
+      <div >
+        <md-button class="md-raised" ui-sref="customers.new">Nouveau</md-button>
+      </div>
+
+      <span flex></span>
+      <md-input-container flex="30" class="md-icon-float md-icon-left md-block md-caption" style="padding-bottom: 0; margin-bottom: 0;">
+        <md-icon md-font-set="material-icons">search</md-icon>
+        <label>Recherchez un client</label>
+        <input type="text" ng-model="filter.search">
+      </md-input-container>
+    <span flex></span>
+
+      <div>
+        <md-button class="md-button md-raised" aria-label="More">
+          <md-icon md-font-set="material-icons">autorenew</md-icon>
+        </md-button>
+        <md-button class="md-button md-raised" aria-label="More">
+          <md-icon md-font-set="material-icons">list</md-icon>
+        </md-button>
+      </div>       
+    </div>
+  </header>
+
+  <md-content layout="column" flex class="md-margin" layout-align="center center" layout-fill> 
+    <md-table-container layout-fill>
+      <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
+        <thead md-head md-order="query.order" md-on-reorder="getDesserts">
+          <tr md-row>
+            <th md-column md-order-by="completed">Etat</th>
+            <th md-column md-order-by="reference">#</th>
+            <th md-column md-order-by="customer.full_name">Client</th>
+            <th md-column md-order-by="created">Créé</th>
+            <th md-column md-order-by="updated">Modifié</th>
+            <th md-column md-order-by="last_activity">Dernière activité</th>
+            <th md-column md-order-by="created_by">Utilisateur</th>
+          </tr>
+        </thead>
+        <tbody md-body>
+          <tr md-row md-select="item" md-select-id="id" md-auto-select ng-repeat="item in dataItems | filter: filter.search | orderBy: query.order">
+            <td md-cell>
+              <md-icon class="md-primary" md-font-set="material-icons" ng-show="item.completed">receipt</md-icon>
+              <md-icon class="md-warn" md-font-set="material-icons" ng-show="item.completed == false">receipt</md-icon>
+            </td>
+            <td md-cell>{{item.reference}}</td>
+            <td md-cell>{{item.customer.full_name}}</td>
+            <td md-cell>{{item.created | date : 'dd/MM/yy hh:mm'}}</td>
+            <td md-cell>{{item.updated | date : 'dd/MM/yy hh:mm'}}</td>
+            <td md-cell>{{item.last_activity | date : 'dd/MM/yy hh:mm'}}</td>
+            <td md-cell>
+              <md-button class="md-mini md-icon-button" aria-label="More">
+                <md-icon md-font-set="material-icons">perm_identity</md-icon>
+                <md-tooltip>{{item.created_by}}</md-tooltip>                
+              </md-button>
+            </td>
+          </tr>
+        </tbody>
+      </table>            
+    </md-table-container>
+  </md-content>
+</div>
