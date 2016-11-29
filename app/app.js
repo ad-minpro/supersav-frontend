@@ -6,6 +6,7 @@ var myapp = angular.module('myapp', [
 	'ngMdIcons',
     'ui.router', 
     'md.data.table', 
+    'angularMoment'
     //'ui.bootstrap'
     //'mdDataTable'
 ])

@@ -48,7 +48,9 @@
             <td md-cell>{{item.customer.full_name}}</td>
             <td md-cell>{{item.created | date : 'dd/MM/yy hh:mm'}}</td>
             <td md-cell>{{item.updated | date : 'dd/MM/yy hh:mm'}}</td>
-            <td md-cell>{{item.last_activity | date : 'dd/MM/yy hh:mm'}}</td>
+            <td md-cell>
+              <time>{{ item.last_activity | amDateFormat: 'dddd Do MMMM YYYY - h:mm' }}</time>
+            </td>
             <td md-cell>
               <md-button class="md-mini md-icon-button" aria-label="More">
                 <md-icon md-font-set="material-icons">perm_identity</md-icon>
