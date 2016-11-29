@@ -41,16 +41,11 @@
               <span flex class="md-caption">Tableau de bord</span>
             </md-list-item>
 
-            <md-divider ></md-divider> 
+            
             <md-list-item ng-click="null" ui-sref-active="md-list-active">          
               <md-icon md-font-set="material-icons">whatshot</md-icon>
               <span flex class="md-caption">Activité</span>
             </md-list-item>
-            <md-list-item ng-click="null" ui-sref-active="md-list-active">          
-              <md-icon md-font-set="material-icons">mood</md-icon>
-              <span flex class="md-caption">Feedback client</span>
-            </md-list-item>
-
             <md-divider ></md-divider> 
             <md-list-item ng-click="null" ui-sref="tickets.list" ui-sref-active="md-list-active">
               <span flex class="md-caption">Tickets</span>
@@ -58,16 +53,17 @@
               <b class="my_badge orange">3</b>
 
             </md-list-item> 
-            <md-list-item ng-click="null" ui-sref="customers.main" ui-sref-active="md-list-active">
+            <md-list-item ng-click="null" ui-sref="customers.list" ui-sref-active="md-list-active">
               <span class="md-caption">Clients</span>
             </md-list-item>              
-            <md-divider ></md-divider>
+            <md-list-item ng-click="null" ui-sref-active="md-list-active">          
+              <span flex class="md-caption">Feedback</span>
+            </md-list-item>
 
-            <md-subheader class="md-no-sticky">Partenaires</md-subheader>
-            <md-list-item ng-click="null" ui-sref-active="md-list-active">
+            <md-list-item ng-click="null" ui-sref="contacts.list" ui-sref-active="md-list-active">
               <span class="md-caption">Contacts</span> 
             </md-list-item>          
-            <md-list-item ng-click="null" ui-sref-active="md-list-active">
+            <md-list-item ng-click="null" ui-sref="proceedings.list" ui-sref-active="md-list-active">
               <span class="md-caption">Procédures</span> 
             </md-list-item>
             <md-divider ></md-divider>
@@ -204,6 +200,8 @@
   <script src="/tickets/controllers/common.js"></script>
   <script src="/tickets/controllers/new.js"></script>
   <script src="/todo/controllers/todo.js"></script>
+  <script src="/contacts/controllers/common.js"></script>
+  <script src="/proceedings/controllers/common.js"></script>
 
   <!-- Services -->
   <script src="/customers/services/customers.js"></script>
