@@ -17,3 +17,4 @@ myapp.controller('TicketsCommonCtrl', function($scope, $rootScope, TicketsServic
 	};
 
 });
+
