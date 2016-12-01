@@ -9,11 +9,11 @@
   -->
 
   <!-- CONTENT -->
-  <md-content layout="column" layout-fill class="back-light md-padding" ng-cloak>
+  <md-content layout="column" class="back-light" layout-padding ng-cloak>
 
 
 
-    <div layout="row">
+    <div layout-gt-sm="row" layout="column" layout-margin>
       <div flex="25">
         <md-card>
           <md-card-content  layout="column" layout-align="space-between end">
@@ -54,10 +54,12 @@
           </md-card-content>
         </md-card>
       </div>
-    </div>            
-    <br>
-    <div layout="row">
-      <div flex="30">
+    </div>
+
+    <!--<div layout="row" layout-margin><br></div>            -->
+
+    <div layout-gt-sm="row" layout="column" layout-margin>
+      <div flex-gt-sm="30">
         <md-card class="orange">
           <md-card-title>
             <md-card-title-text>
@@ -73,7 +75,7 @@
           </md-card-content>
         </md-card>
       </div>
-      <div flex="30">
+      <div flex-gt-sm="30">
         <md-card class="">
           <md-card-title>
             <md-card-title-text>
