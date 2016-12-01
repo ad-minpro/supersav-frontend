@@ -199,6 +199,10 @@ md-input-container>label {
     color: grey;
 }
 
+md-input-container {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
 md-tabs {
   padding-top: 10px; 
 }
@@ -211,3 +215,8 @@ md-tab-content {
   margin: 25px; 
 }
 */
+
+.padding-15 {
+  padding-left: 15px;
+  padding-right: 15px;  
+}
