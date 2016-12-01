@@ -25,6 +25,65 @@
     <md-card flex>
       <md-card-content layout="column">
 
+        <form role="form">
+        <div layout-gt-sm="row">
+          <h3>PRODUIT</h3>
+          <span flex></span>
+          <span class="md-subheader">ETAPE 1/2</span>
+        </div>
+          <div layout-gt-sm="row">
+            <md-input-container style="margin-right: 10px;" flex>
+              <label>Marque</label>
+              <md-select ng-model="brand">
+                <md-option ng-repeat="brand in brands" value="{{brand}}">{{brand}}</md-option>
+              </md-select>
+            </md-input-container> 
+            <md-input-container style="margin-right: 10px;" flex>
+              <label>Catégorie</label>
+              <md-select ng-model="size">
+                <md-option ng-repeat="size in sizes" value="{{size}}">{{size}}</md-option>
+              </md-select>
+            </md-input-container>            
+            <md-input-container flex>
+              <label>Famille</label>
+              <md-select ng-model="selectedToppings">
+                <md-optgroup label="imprimante et multifonction">
+                  <md-option ng-value="topping.name" ng-repeat="topping in toppings | filter: {category: 'imprimante et multifonction' }">{{topping.name}}</md-option>
+                </md-optgroup>
+                <md-optgroup label="high tech">
+                  <md-option ng-value="topping.name" ng-repeat="topping in toppings | filter: {category: 'high tech' }">{{topping.name}}</md-option>
+                </md-optgroup>
+              </md-select>
+            </md-input-container>
+          </div>
+
+          <div layout-gt-sm="row" layout-align="center center">
+            <label>Désignation produit</label>
+            <md-chips ng-model="fruitNames" readonly="readonly" md-removable="removable" flex></md-chips>            
+          </div>
+
+          <div layout-gt-sm="row">
+            <label>Garantie </label>
+            <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb5" class="md-primary"></md-checkbox>
+          </div>
+
+          <div layout-gt-sm="row">
+            <md-input-container class="md-block" flex>
+              <label>Description du problème</label>
+              <textarea ng-model="model.note" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+            </md-input-container>
+          </div>
+
+          <div layout-gt-sm="row">
+            <md-input-container class="md-block" flex>
+              <label>Note</label>
+              <textarea ng-model="model.note" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+            </md-input-container>
+          </div>
+
+
+       
+        </form>
       </md-card-content>
     </md-card>
     <div flex="20"></div>
