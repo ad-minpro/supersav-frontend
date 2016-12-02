@@ -1,0 +1,143 @@
+<div layout-fill data-ng-controller="NewCustomerCtrl">
+  <md-content layout="column" layout-fill flex class="back-light">
+    <header layout-align="space-between" class="header-content" hide-xs>
+      <div class="md-toolbar-tools" layout-fill>
+        <div>
+          <md-button class="md-raised md-button" ui-sref="customers.list" aria-label="Retour">
+            <md-icon md-svg-icon="/static/img/svg/ic_arrow_back_black_24px.svg"></md-icon>
+          </md-button>
+        </div>
+        <span flex></span>
+      <!--
+        <md-icon class="name" style="color: grey;" md-svg-icon="/static/img/svg/ic_search_black_24px.svg"></md-icon>
+        <md-input-container flex="20" class="md-icon-float md-block md-caption md-accent" style="padding-bottom: 0; margin-bottom: 0;">
+          <label>Recherchez un client</label>
+          <input type="text">
+        </md-input-container>
+      -->
+        <span flex></span>
+        <div>
+          <md-button class="md-button md-raised" aria-label="Valider">
+            <md-icon md-font-set="material-icons">done</md-icon>
+          </md-button>
+          <md-button class="md-button md-raised" aria-label="Quitter">
+            <md-icon md-font-set="material-icons">exit_to_app</md-icon>
+          </md-button>
+        </div>       
+      </div>
+    </header>
+
+      <div layout="row" layout-align="center" class="back-light md-margin" style="text-align: center;">
+        <md-card flex="70" layout-fill class="md-margin">
+          <md-card-content layout-fill layout="column">
+
+            
+            <div layout="row" layout-sm="column">
+              <div flex class="orange"><h1>block 1</h1></div>
+              <div flex class="blue"><h1>block 2</h1></div>
+            </div>
+            <div layout="row">
+              <div flex class="yellow"><h1>block 3</h1></div>
+            </div>
+            <div layout="column" layout-gt-sm="row">
+              <div layout="column" flex-gt-sm="50">
+                <div class="green"><h1>block 4</h1></div>
+                <div class="indigo"><h1>block 5</h1></div>
+                <div class="purple"><h1>block 6</h1></div>
+                <div class="red"><h1>block 7</h1></div>
+              </div>
+              <div layout="column" flex-gt-sm>
+                <div class="blue"><h1>block 8</h1></div>
+                <div class="yellow"><h1>block 9</h1></div>
+                <div class="grey"><h1>block 10</h1></div>
+              </div>
+            </div>
+            <div layout="row">
+              <div flex class="green"><h1>block 11</h1></div>
+            </div>
+            <div layout="row">
+              <div flex class="yellow"><h1>block 12</h1></div>
+            </div>
+            <div layout="row">
+              <div flex class="blue"><h1>block 13</h1></div>
+            </div>            
+            <!--
+              <div layout-gt-sm="row" layout="column">
+                <div layout="column" flex class="padding-15">
+                  <md-input-container class="md-block md-icon-left" >
+                    <md-icon md-font-set="material-icons">person</md-icon>
+                    <label>Nom</label>
+                    <input ng-model="customer.lastname" type="text">
+                  </md-input-container>
+                </div>
+                <div layout="column" flex class="padding-15">            
+                  <md-input-container md-no-float class="md-block">
+                    <label>Prénom</label>
+                    <input ng-model="customer.firstname" type="text">
+                  </md-input-container>
+                </div>
+              </div>
+
+              <div layout-gt-sm="row" layout="column">
+                  <md-input-container class="md-block" flex>
+                    <label>Raison sociale</label>
+                    <input type="text" ng-model="customer.corporate_name">
+                  </md-input-container>
+              </div>
+
+              <div layout="column" layout-gt-sm="row">
+                <div layout="column" flex class="padding-15">
+                  <md-input-container class="md-block md-icon-left">
+                    <md-icon md-font-set="material-icons">place</md-icon>
+                    <label>Adresse</label>
+                    <input type="text" ng-model="model.address">
+                  </md-input-container>
+
+                  <md-input-container class="md-block">
+                      <label>Code postal</label>
+                      <input type="text" ng-model="model.zipcode">
+                  </md-input-container>
+
+                  <md-input-container class="md-block">
+                      <label>Ville</label>
+                      <input type="text" ng-model="model.town">
+                  </md-input-container>
+
+                  <md-input-container class="md-block">
+                      <label>Pays</label>
+                      <input type="text" ng-model="model.country">
+                  </md-input-container>
+                </div>
+
+                <div layout="column" flex class="padding-15">
+                  <md-input-container class="md-block md-icon-left">
+                    <md-icon md-font-set="material-icons">phone</md-icon>
+                    <input type="text" ng-model="model.phone_1" aria-label="Téléphone">
+                  </md-input-container>
+
+                  <md-input-container class="md-block md-icon-left">
+                    <md-icon md-font-set="material-icons">smartphone</md-icon>
+                    <input type="text" ng-model="model.phone_2" aria-label="Smartphone">
+                  </md-input-container>
+
+                  <md-input-container class="md-block md-icon-left">
+                    <md-icon md-font-set="material-icons">email</md-icon>
+                    <input type="text" ng-model="model.email" aria-label="Email">
+                  </md-input-container>              
+                </div>              
+              </div>
+              
+              <div layout-gt-sm="row" layout="column" class="padding-15">
+                <md-input-container class="md-block" flex>
+                  <label>Note</label>
+                  <textarea ng-model="model.note" md-maxlength="150" rows="2" md-select-on-focus></textarea>
+                </md-input-container>
+              </div>
+            -->
+            
+          </md-card-content>
+        </md-card>
+      </div>
+
+  </md-content>
+</div>

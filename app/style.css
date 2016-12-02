@@ -203,12 +203,13 @@ md-input-container {
   margin-top: 8px;
   margin-bottom: 8px;
 }
-md-tabs {
-  padding-top: 10px; 
+.min-400 {
+  /*padding-top: 10px; */
+  min-height: 400px;
 }
 
 md-tab-content {
-  margin: 10px; 
+  /*margin: 10px; */
 }
 /*
 md-tab-content {

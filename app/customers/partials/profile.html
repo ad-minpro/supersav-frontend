@@ -1,139 +1,176 @@
 <div flex layout-fill data-ng-controller="CustomersProfileCtrl" layout="column">
-  <!-- TOOLBAR -->
-  <header layout-align="space-between" class="header-content">
-    <div class="md-toolbar-tools" layout-fill>
-      <div >
-        <md-button class="md-raised md-button" ui-sref="customers.list">
-          <md-icon md-font-set="material-icons">arrow_back</md-icon>
-        </md-button>
+  <md-content layout="column" layout-fill flex class="back-light">
+    <!-- TOOLBAR -->
+    <header layout-align="space-between" class="header-content">
+      <div class="md-toolbar-tools" layout-fill>
+        <div >
+          <md-button class="md-raised md-button" ui-sref="customers.list">
+            <md-icon md-font-set="material-icons">arrow_back</md-icon>
+          </md-button>
+        </div>
+
+
+        <span flex></span>
+
+        <div>
+          <md-button class="md-button md-raised" aria-label="More">
+            <md-icon md-font-set="material-icons">autorenew</md-icon>
+          </md-button>
+          <md-button class="md-button md-raised" aria-label="More">
+            <md-icon md-font-set="material-icons">create</md-icon>
+          </md-button>
+        </div>       
       </div>
+    </header>
+    <!-- CARD -->
 
+    <div layout="row" layout-align="center" class="md-margin">
+      <md-card flex-gt-sm="70" layout-fill class="md-margin">
 
-      <span flex></span>
+        <md-card-header>
+          <md-card-avatar> 
+            <md-icon ng-show="data.professional" class="md-user-avatar" md-svg-icon="/static/img/humans/business.svg"></md-icon>
+            <md-icon ng-show="!data.professional" class="md-user-avatar"  md-svg-icon="/static/img/humans/user.svg"></md-icon>
+          </md-card-avatar>
+          <md-card-header-text ng-if="data.professional">
+            <span class="md-title">{{data.corporate_name}}</span>
+            <span class="md-subhead">{{data.fullname}}</span>
+          </md-card-header-text>
+          <md-card-header-text ng-if="data.professional != true">
+            <span class="md-title">{{data.fullname}}</span>
+            <span class="md-subhead">particulier</span>
+          </md-card-header-text>    
+        </md-card-header>
+        <!--
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">Card with image</span>
+              <span class="md-subhead">Extra Large</span>
+            </md-card-title-text>
+          </md-card-title>
+        -->
+        <md-card-content layout="column" layout-fill >
+          <md-tabs md-border-bottom md-dynamic-height layout-fill class="min-400">
+            <md-tab label="Profile" >
 
-      <div>
-        <md-button class="md-button md-raised" aria-label="More">
-          <md-icon md-font-set="material-icons">autorenew</md-icon>
-        </md-button>
-        <md-button class="md-button md-raised" aria-label="More">
-          <md-icon md-font-set="material-icons">create</md-icon>
-        </md-button>
-      </div>       
-    </div>
-  </header>
-  <!-- CONTENT -->
-<div layout="column" layout-fill flex class="back-light">
-  <div flex="5"></div>
-  <div flex layout="row">
-    <div flex="10"></div>
-    <md-card flex>
+              <div layout="row" hide-xs>
+                
+                  <md-card flex="25">
+                    <md-card-content  layout="column" layout-align="space-between end">
+                      <div layout="column" layout-align="space-between end">
+                        <p class="md-display-3 orange-font" style="margin: 0px;">1</p>
+                        <p class="no-margin grey-font">EN COURS</p>
+                      </div>
+                    </md-card-content>
+                  </md-card>
 
-      <md-card-header>
-        <md-card-avatar>
-          <md-icon class="md-user-avatar" md-font-set="material-icons">create</md-icon>
-        </md-card-avatar>
-        <md-card-header-text ng-if="data.professional">
-          <span class="md-title">{{data.corporate_name}}</span>
-          <span class="md-subhead">{{data.fullname}}</span>
-        </md-card-header-text>
-        <md-card-header-text ng-if="data.professional != true">
-          <span class="md-title">{{data.fullname}}</span>
-          <span class="md-subhead">particulier</span>
-        </md-card-header-text>    
-      </md-card-header>
-      <!--
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">Card with image</span>
-            <span class="md-subhead">Extra Large</span>
-          </md-card-title-text>
-        </md-card-title>
-      -->
-      <md-card-content layout="row" layout-fill>
-      
-        <br>
-        <md-tabs md-border-bottom layout-fill>
-          <md-tab label="Profile">
-            <md-content>
-              <md-list flex>
-                <md-subheader>Coordonnées</md-subheader>
-                <md-list-item>
-                  <md-button class="md-icon-button md-mini" aria-label="More">
-                    <md-icon md-font-set="material-icons">phone</md-icon>
+                  <md-card flex="25">
+                    <md-card-content  layout="column" layout-align="space-between end">
+                      <div layout="column" layout-align="space-between end">
+                        <p class="md-display-3 blue-font" style="margin: 0px;">0</p>
+                        <p class="no-margin grey-font">TICKETS CLOS</p>
+                      </div>
+                    </md-card-content>
+                  </md-card>
+
+                  <md-card flex="25">
+                    <md-card-content  layout="column" layout-align="space-between end">
+                      <div layout="column" layout-align="space-between end">
+                        <p class="md-display-3 indigo-font" style="margin: 0px;">1</p>
+                        <p class="no-margin grey-font">ACHATS</p>
+                      </div>
+                    </md-card-content>
+                  </md-card>
+
+                  <md-card flex="25">
+                    <md-card-content  layout="column" layout-align="space-between end">
+                      <div layout="column" layout-align="space-between end">
+                        <p class="md-display-3 green-font" style="margin: 0px;">3/5</p>
+                        <p class="no-margin grey-font">NOTE</p>
+                      </div>
+                    </md-card-content>
+                  </md-card>                
+              </div>
+
+              <div layout-gt-sm="row" layout="column" layout-fill>
+                <md-list layout-fill flex>
+                  <md-subheader>Coordonnées</md-subheader>
+                  <md-list-item>
+                    <md-button class="md-icon-button md-mini" aria-label="Téléphone">
+                      <md-icon md-font-set="material-icons">phone</md-icon>
+                    </md-button>          
+                    <span flex> {{data.phone_1}} </span>
+                  </md-list-item>
+                  <md-list-item>
+                  <md-button class="md-icon-button md-mini" aria-label="Portable">
+                    <md-icon md-font-set="material-icons">smartphone</md-icon>
+                  </md-button>           
+                    <span flex> {{data.phone_2}} </span>
+                  </md-list-item>
+                  <md-list-item>
+                  <md-button class="md-icon-button md-mini" aria-label="Email">
+                    <md-icon md-font-set="material-icons">email</md-icon>
                   </md-button>          
-                  <span flex> {{data.phone_1}} </span>
-                </md-list-item>
-                <md-list-item>
-                <md-button class="md-icon-button md-mini" aria-label="More">
-                  <md-icon md-font-set="material-icons">smartphone</md-icon>
-                </md-button>           
-                  <span flex> {{data.phone_2}} </span>
-                </md-list-item>
-                <md-list-item>
-                <md-button class="md-icon-button md-mini" aria-label="More">
-                  <md-icon md-font-set="material-icons">email</md-icon>
-                </md-button>          
-                  <span flex> {{data.email}} </span>
-                </md-list-item>     
-
-                <md-list-item class="md-3-line">
-                <md-button class="md-icon-button md-mini" aria-label="More">
-                  <md-icon md-font-set="material-icons">place</md-icon>
-                </md-button>          
-                  <div class="md-list-item-text" layout="column">
-                  <p>
-                          {{data.address}}<br>
-                          {{data.zipcode}} {{data.town}}<br>
-                          {{data.country}}
-                  </p>
-                  </div>
-                </md-list-item>  
-                <md-divider ></md-divider>
-                <md-subheader>Notifications</md-subheader>
-                <md-list-item>
-                   <md-icon class="md-warn" md-font-set="material-icons">textsms</md-icon>
-                   <span flex>sms</span>
-                  <md-switch class="md-primary" ng-model="data.send_sms"></md-switch>
-                </md-list-item>
-                <md-list-item>
-                   <md-icon class="md-warn" md-font-set="material-icons">email</md-icon>
-                   <span flex>email</span>
-                    <md-switch class="md-primary" ng-model="data.send_email"></md-switch>
-                </md-list-item>        
-                <md-divider ></md-divider>
-                <md-list-item >
-                  <p class="md-caption silver-font">
-                    Créé le {{data.added | date : 'dd/MM/yyyy à hh:mm'}}, dernière modification le {{data.updated | date : 'dd/MM/yyyy à hh:mm'}}
-                  </p>
-                </md-list-item>                               
-              </md-list>
-            </md-content>
-          </md-tab>        
-          <md-tab label="Dossiers en cours">
-            <md-content class="md-padding">
-              <p>Liste des dossiers SAV en cours</p>
-            </md-content>
-          </md-tab>
-          <md-tab label="Historique">
-            <md-content class="md-padding">
-              <p>Historique SAV / Liste des tickets</p>
-            </md-content>
-          </md-tab>
-          <md-tab label="Achats">
-            <md-content class="md-padding">
-              <p>Liste des achats effectués par le client / factures</p>
-            </md-content>
-          </md-tab>
-        </md-tabs>
+                    <span flex> {{data.email}} </span>
+                  </md-list-item>    
+                  <md-subheader>Adresse</md-subheader>
+                  <md-list-item class="md-3-line">
+                    <md-button class="md-icon-button md-mini" aria-label="Adresse">
+                      <md-icon md-font-set="material-icons">place</md-icon>
+                    </md-button>          
+                    <div class="md-list-item-text" layout="column">
+                    <p>
+                            {{data.address}}<br>
+                            {{data.zipcode}} {{data.town}}<br>
+                            {{data.country}}
+                    </p>
+                    </div>
+                  </md-list-item>          
+                </md-list>
+                <md-list layout-fill flex>
+                  <md-subheader>Notifications</md-subheader>
+                  <md-list-item>
+                     <md-icon class="md-warn" md-font-set="material-icons">textsms</md-icon>
+                     <span flex>sms</span>
+                    <md-switch class="md-primary" ng-model="data.send_sms"></md-switch>
+                  </md-list-item>
+                  <md-list-item>
+                     <md-icon class="md-warn" md-font-set="material-icons">email</md-icon>
+                     <span flex>email</span>
+                      <md-switch class="md-primary" ng-model="data.send_email"></md-switch>
+                  </md-list-item>                                     
+                </md-list>
+              </div>
+              <div flex>
+                <p class="md-caption silver-font">
+                  Créé le {{data.added | date : 'dd/MM/yyyy à hh:mm'}}, dernière modification le {{data.updated | date : 'dd/MM/yyyy à hh:mm'}}
+                </p>
+              </div>                
+            </md-tab>        
+            <md-tab label="Dossiers en cours">
+              <md-content class="md-padding">
+                <p>Liste des dossiers SAV en cours</p>
+              </md-content>
+            </md-tab>
+            <md-tab label="Historique">
+              <md-content class="md-padding">
+                <p>Historique SAV / Liste des tickets</p>
+              </md-content>
+            </md-tab>
+            <md-tab label="Achats">
+              <md-content class="md-padding">
+                <p>Liste des achats effectués par le client / factures</p>
+              </md-content>
+            </md-tab>
+            <md-tab label="Feedback">
+              <md-content class="md-padding">
+                <p>Evaluations du client</p>
+              </md-content>
+            </md-tab>            
+          </md-tabs>
+        </md-card-content>
+      </md-card>
+    </div>
     
-
-      </md-card-content>
-    </md-card>
-    <div flex="10"></div>
-  </div>
-  <div flex="5"></div>
-</div>
-
-
-
+  </md-content>
 </div>
