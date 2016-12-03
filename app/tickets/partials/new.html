@@ -57,10 +57,12 @@
             </md-input-container>
           </div>
 
-          <div layout-gt-sm="row" layout-align="center center">
-            <label>Désignation produit</label>
-            <md-chips ng-model="fruitNames" readonly="readonly" md-removable="removable" flex></md-chips>            
-          </div>
+          <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-xs="">
+            <label>Désignation produit(s)</label>
+            <md-chips ng-model="products" readonly="false"></md-chips>
+          </md-input-container>
+        </div>
 
           <div layout-gt-sm="row">
             <label>Garantie </label>

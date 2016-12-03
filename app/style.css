@@ -203,21 +203,38 @@ md-input-container {
   margin-top: 8px;
   margin-bottom: 8px;
 }
+
 .min-400 {
-  /*padding-top: 10px; */
   min-height: 400px;
 }
 
-md-tab-content {
-  /*margin: 10px; */
-}
-/*
-md-tab-content {
-  margin: 25px; 
-}
-*/
+
 
 .padding-15 {
   padding-left: 15px;
   padding-right: 15px;  
+}
+
+
+.md-chips .md-chip-input-container input {
+  width: 100px;
+}
+
+
+
+.md-chip-remove-container {
+  /*background-color: red;*/
+  /*
+    margin-left: 20px;
+    
+    height: 24px; 
+    */
+  }
+
+.md-chip-content {
+  /*background-color: red;*/
+}
+
+.md-chips md-chip {
+  padding-right: 26px;
 }
