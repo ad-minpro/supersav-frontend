@@ -20,6 +20,15 @@ myapp.controller('TestCtrl', function($scope){
 myapp.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $log) {
     $scope.toggleLeft = buildDelayedToggler('left');
 
+    $scope.swipeLeft = function () {
+      // Component lookup should always be available since we are not using `ng-if`
+      $mdSidenav('left').close()
+        .then(function () {
+          $log.debug("swipe LEFT");
+        });
+
+    };
+
     /**
      * Supplies a function that will continue to operate until the
      * time is up.

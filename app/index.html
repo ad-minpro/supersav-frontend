@@ -22,7 +22,7 @@
 
     <section layout="row" flex>
 
-      <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-disable-backdrop="" md-swipe-left="$mdSidenav( 'left' ).close()">
+      <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-disable-backdrop="" md-swipe-left="swipeLeft()">
         <md-toolbar class="md-primary">
           <div class="bg-logo" layout="row" layout-align="end end" ng-controller="LeftCtrl">
             <md-button class="md-mini md-icon-button md-primary md-hue-3" ui-sref="tickets.new" aria-label="Nouveau ticket">
@@ -30,7 +30,10 @@
             </md-button>              
             <md-button class="md-mini md-icon-button md-primary md-hue-1" ng-click="close()" aria-label="Fermer">
               <md-icon md-font-set="material-icons">close</md-icon>
-            </md-button> 
+            </md-button>
+            <md-button class="md-mini md-icon-button md-primary md-hue-3" ng-click="swipeLeft()" aria-label="Fermer">
+              <md-icon md-font-set="material-icons">android</md-icon>
+            </md-button>              
           </div>
           <!--<h1 class="md-toolbar-tools">#SuperApp</h1>-->
         </md-toolbar>
@@ -150,6 +153,7 @@
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js'></script>
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js'></script>
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-touch.min.js'></script>
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.min.js'></script>
   <script src='https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js'></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.js"></script>

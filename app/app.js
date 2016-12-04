@@ -3,6 +3,8 @@
 var myapp = angular.module('myapp', [
 	'ngResource', 
 	'ngMaterial',
+    'ngTouch', 
+    'ngAnimate',
 	'ngMdIcons',
     'ui.router', 
     'md.data.table', 
