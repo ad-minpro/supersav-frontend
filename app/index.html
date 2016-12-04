@@ -22,7 +22,7 @@
 
     <section layout="row" flex>
 
-      <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-disable-backdrop="">
+      <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-disable-backdrop="" md-swipe-left="$mdSidenav( 'left' ).close()">
         <md-toolbar class="md-primary">
           <div class="bg-logo" layout="row" layout-align="end end" ng-controller="LeftCtrl">
             <md-button class="md-mini md-icon-button md-primary md-hue-3" ui-sref="tickets.new" aria-label="Nouveau ticket">
