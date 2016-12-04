@@ -7,12 +7,12 @@ myapp.config(function($stateProvider, $urlRouterProvider) {
         // HOME STATES AND NESTED VIEWS =======================================
         .state('dashboard', {
             url: '/dashboard',
-            templateUrl: 'dashboard/partials/dashboard2.html'
+            templateUrl: 'dashboard/partials/dashboard.html'
         })
 
-        .state('dashboard2', {
-            url: '/dashboard2',
-            templateUrl: 'dashboard/partials/dashboard.html'
+        .state('dashboard-old', {
+            url: '/dashboard-old',
+            templateUrl: 'dashboard/partials/dashboard_old.html'
         })
 
         // TICKETS ============================================================
