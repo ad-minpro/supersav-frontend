@@ -6,7 +6,7 @@
       </div>
 
       <span flex></span>
-      <md-input-container flex="30" class="md-icon-float md-icon-left md-block md-caption" style="padding-bottom: 0; margin-bottom: 0;">
+      <md-input-container flex="30" class="md-icon-float md-icon-left md-block md-caption" style="padding-bottom: 0; margin-bottom: 0;"  hide-xs>
         <md-icon md-font-set="material-icons">search</md-icon>
         <label>Recherchez un client</label>
         <input type="text" ng-model="filter.search">
@@ -17,7 +17,7 @@
         <md-button class="md-button md-raised" aria-label="Recharger">
           <md-icon md-font-set="material-icons">autorenew</md-icon>
         </md-button>
-        <md-button class="md-button md-raised" aria-label="Liste">
+        <md-button class="md-button md-raised" aria-label="Liste" hide-xs>
           <md-icon md-font-set="material-icons">list</md-icon>
         </md-button>
       </div>       
@@ -31,9 +31,9 @@
           <tr md-row>
             <th md-column md-order-by="professional">Pro</th>
             <th md-column md-order-by="fullname">Nom / Raison social</th>
-            <th md-column md-numeric>Tél 1</th>
-            <th md-column md-numeric>Tél 2</th>
-            <th md-column md-order-by="town">Ville</th>
+            <th hide-xs md-column md-numeric>Tél 1</th>
+            <th hide-xs md-column md-numeric>Tél 2</th>
+            <th hide-xs md-column md-order-by="town">Ville</th>
           </tr>
         </thead>
         <tbody md-body>
@@ -43,9 +43,9 @@
               <md-icon ng-show="!item.professional" class="md-button md-icon-button md-primary"  md-svg-icon="/static/img/humans/user.svg"></md-icon>
             </td>
             <td md-cell>{{item.fullname}}</td>
-            <td md-cell>{{item.phone_1}}</td>
-            <td md-cell>{{item.phone_1}}</td>
-            <td md-cell>{{item.town}}</td>
+            <td hide-xs md-cell>{{item.phone_1}}</td>
+            <td hide-xs md-cell>{{item.phone_1}}</td>
+            <td hide-xs md-cell>{{item.town}}</td>
           </tr>
         </tbody>
       </table>            
