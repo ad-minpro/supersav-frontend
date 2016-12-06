@@ -14,7 +14,7 @@ var myapp = angular.module('myapp', [
 ])
 
 myapp.run(function($rootScope) {
-    $rootScope.page = {'title': 'n/c', 'subtitle': '' };
+    $rootScope.page = {'title': '', 'subtitle': '' };
   });
 
 

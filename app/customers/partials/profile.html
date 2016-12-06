@@ -4,7 +4,7 @@
     <header layout-align="space-between" class="header-content">
       <div class="md-toolbar-tools" layout-fill>
         <div >
-          <md-button class="md-raised md-button" ui-sref="customers.list">
+          <md-button class="md-raised md-button" ui-sref="customers.list" aria-label="Retour">
             <md-icon md-font-set="material-icons">arrow_back</md-icon>
           </md-button>
         </div>
@@ -13,10 +13,10 @@
         <span flex></span>
 
         <div>
-          <md-button class="md-button md-raised" aria-label="More">
+          <md-button class="md-button md-raised" aria-label="Recharger">
             <md-icon md-font-set="material-icons">autorenew</md-icon>
           </md-button>
-          <md-button class="md-button md-raised" aria-label="More">
+          <md-button class="md-button md-raised" aria-label="Nouveau">
             <md-icon md-font-set="material-icons">create</md-icon>
           </md-button>
         </div>       
@@ -130,14 +130,14 @@
                 <md-list layout-fill flex>
                   <md-subheader>Notifications</md-subheader>
                   <md-list-item>
-                     <md-icon class="md-warn" md-font-set="material-icons">textsms</md-icon>
-                     <span flex>sms</span>
-                    <md-switch class="md-primary" ng-model="data.send_sms"></md-switch>
+                    <md-icon class="md-warn" md-font-set="material-icons">textsms</md-icon>
+                    <span flex>sms</span>
+                    <md-switch class="md-primary" ng-model="data.send_sms" aria-label="Notifier par sms"></md-switch>
                   </md-list-item>
                   <md-list-item>
-                     <md-icon class="md-warn" md-font-set="material-icons">email</md-icon>
-                     <span flex>email</span>
-                      <md-switch class="md-primary" ng-model="data.send_email"></md-switch>
+                    <md-icon class="md-warn" md-font-set="material-icons">email</md-icon>
+                    <span flex>email</span>
+                    <md-switch class="md-primary" ng-model="data.send_email" aria-label="Notifier par email"></md-switch>
                   </md-list-item>                                     
                 </md-list>
               </div>
