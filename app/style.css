@@ -238,3 +238,7 @@ md-input-container {
 .md-chips md-chip {
   padding-right: 26px;
 }
+
+.check {
+  margin-bottom: 0;
+}

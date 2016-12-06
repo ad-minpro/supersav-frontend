@@ -6,8 +6,8 @@ myapp.controller('NewTicketCtrl', function($scope, $rootScope, TicketsService){
     $scope.removable = false;
 
     // Lists of fruit names and Vegetable objects
-    $scope.products = ['MG5650'];
-    $scope.chips = ['MG5650-2'];
+    $scope.products = [];
+    $scope.chips = [];
 
   $scope.brands = [
       "canon", 

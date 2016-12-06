@@ -1,95 +1,105 @@
-<div flex layout-fill data-ng-controller="NewTicketCtrl" layout="column">
-  <header layout-align="space-between" class="header-content">
-    <div class="md-toolbar-tools" layout-fill>
-      <div>
-        <md-button class="md-raised md-button" ui-sref="tickets.list" aria-label="Retour">
-          <md-icon md-svg-icon="/static/img/svg/ic_arrow_back_black_24px.svg"></md-icon>
-        </md-button>
+<div flex layout-fill data-ng-controller="NewTicketCtrl">
+  <md-content layout="column" layout-fill flex class="back-light">
+
+    <header layout-align="space-between" class="header-content" hide-xs>
+      <div class="md-toolbar-tools" layout-fill>
+        <div>
+          <md-button class="md-raised md-button" ui-sref="tickets.list" aria-label="Retour">
+            <md-icon md-font-set="material-icons">arrow_back</md-icon>
+          </md-button>
+        </div>
+        <span flex></span>
+        <div>
+          <md-button class="md-button md-raised" ui-sref="tickets.new2" aria-label="Valider">
+            <md-icon md-font-set="material-icons">done</md-icon>
+          </md-button>
+          <md-button class="md-button md-raised" aria-label="Annuler">
+            <md-icon md-font-set="material-icons">clear</md-icon>
+          </md-button>
+        </div>       
       </div>
-      <span flex></span>
-      <div>
-        <md-button class="md-button md-raised" aria-label="Valider">
-          <md-icon md-font-set="material-icons">done</md-icon>
-        </md-button>
-        <md-button class="md-button md-raised" aria-label="Quitter">
-          <md-icon md-font-set="material-icons">exit_to_app</md-icon>
-        </md-button>
-      </div>       
+    </header>
+
+
+    <div layout="row" layout-align="center" class="back-light md-margin">
+      <md-card flex-gt-xs="70" layout-fill class="md-margin">
+        <md-card-content layout-fill layout="column">
+
+          <form role="form">
+            <div layout="row">
+              <h3 class="md-primary">PRODUIT</h3>
+              <span flex></span>
+              <span class="md-subheader">ETAPE 1/2</span>
+            </div>
+            <div layout-gt-sm="row" layout="column">
+              <md-input-container style="margin-right: 10px;" flex>
+                <label>Marque</label>
+                <md-select ng-model="brand">
+                  <md-option ng-repeat="brand in brands" value="{{brand}}">{{brand}}</md-option>
+                </md-select>
+              </md-input-container> 
+              <md-input-container style="margin-right: 10px;" flex>
+                <label>Catégorie</label>
+                <md-select ng-model="size">
+                  <md-option ng-repeat="size in sizes" value="{{size}}">{{size}}</md-option>
+                </md-select>
+              </md-input-container>            
+              <md-input-container flex>
+                <label>Famille</label>
+                <md-select ng-model="selectedToppings">
+                  <md-optgroup label="imprimante et multifonction">
+                    <md-option ng-value="topping.name" ng-repeat="topping in toppings | filter: {category: 'imprimante et multifonction' }">{{topping.name}}</md-option>
+                  </md-optgroup>
+                  <md-optgroup label="high tech">
+                    <md-option ng-value="topping.name" ng-repeat="topping in toppings | filter: {category: 'high tech' }">{{topping.name}}</md-option>
+                  </md-optgroup>
+                </md-select>
+              </md-input-container>
+            </div>
+
+            <div layout-gt-sm="row" layout="column">
+              <md-input-container class="md-block" flex-gt-xs="">
+                <label>Désignation produit(s)</label>
+                <md-chips ng-model="products" readonly="false"></md-chips>
+              </md-input-container>
+               
+            </div>
+
+            <div layout-gt-sm="row">
+              
+                <label style="color: grey;">Garantie 
+                <md-checkbox aria-label="Garantie" ng-model="model.warranty" class="md-primary"></md-checkbox>
+                </label>
+                              
+            </div>
+
+            <div layout-gt-sm="row">
+              <md-input-container class="md-block" flex>
+                <label>Description du problème</label>
+                <textarea ng-model="model.desc" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+              </md-input-container>
+            </div>
+
+            <div layout-gt-sm="row">
+              <md-input-container class="md-block" flex>
+                <label>Note</label>
+                <textarea ng-model="model.note" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+              </md-input-container>
+            </div>
+          </form>
+        </md-card-content>
+          <md-card-actions layout="row" layout-align="center" hide-gt-xs>
+            <md-button class="md-raised md-button md-primary" ui-sref="tickets.list" aria-label="Retour">
+              <md-icon md-font-set="material-icons">arrow_back</md-icon>
+            </md-button>
+            <span flex></span>            
+            <md-button class="md-button md-raised md-primary" ui-sref="tickets.new2" aria-label="Valider">
+              <md-icon md-font-set="material-icons">done</md-icon>
+            </md-button>
+          </md-card-actions>          
+        </md-card>        
+      </md-card>
     </div>
-  </header>
 
-<md-content layout="column" layout-fill flex class="back-light">
-  <div flex="5"></div>
-  <div flex layout="row">
-    <div flex="20"></div>
-    <md-card flex>
-      <md-card-content layout="column">
-
-        <form role="form">
-        <div layout="row">
-          <h3 class="md-primary">PRODUIT</h3>
-          <span flex></span>
-          <span class="md-subheader">ETAPE 1/2</span>
-        </div>
-          <div layout-gt-sm="row">
-            <md-input-container style="margin-right: 10px;" flex>
-              <label>Marque</label>
-              <md-select ng-model="brand">
-                <md-option ng-repeat="brand in brands" value="{{brand}}">{{brand}}</md-option>
-              </md-select>
-            </md-input-container> 
-            <md-input-container style="margin-right: 10px;" flex>
-              <label>Catégorie</label>
-              <md-select ng-model="size">
-                <md-option ng-repeat="size in sizes" value="{{size}}">{{size}}</md-option>
-              </md-select>
-            </md-input-container>            
-            <md-input-container flex>
-              <label>Famille</label>
-              <md-select ng-model="selectedToppings">
-                <md-optgroup label="imprimante et multifonction">
-                  <md-option ng-value="topping.name" ng-repeat="topping in toppings | filter: {category: 'imprimante et multifonction' }">{{topping.name}}</md-option>
-                </md-optgroup>
-                <md-optgroup label="high tech">
-                  <md-option ng-value="topping.name" ng-repeat="topping in toppings | filter: {category: 'high tech' }">{{topping.name}}</md-option>
-                </md-optgroup>
-              </md-select>
-            </md-input-container>
-          </div>
-
-          <div layout-gt-sm="row">
-          <md-input-container class="md-block" flex-gt-xs="">
-            <label>Désignation produit(s)</label>
-            <md-chips ng-model="products" readonly="false"></md-chips>
-          </md-input-container>
-        </div>
-
-          <div layout-gt-sm="row">
-            <label>Garantie </label>
-            <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb5" class="md-primary"></md-checkbox>
-          </div>
-
-          <div layout-gt-sm="row">
-            <md-input-container class="md-block" flex>
-              <label>Description du problème</label>
-              <textarea ng-model="model.note" md-maxlength="150" rows="5" md-select-on-focus></textarea>
-            </md-input-container>
-          </div>
-
-          <div layout-gt-sm="row">
-            <md-input-container class="md-block" flex>
-              <label>Note</label>
-              <textarea ng-model="model.note" md-maxlength="150" rows="5" md-select-on-focus></textarea>
-            </md-input-container>
-          </div>
-
-
-       
-        </form>
-      </md-card-content>
-    </md-card>
-    <div flex="20"></div>
-  </div>
-  <div flex="5"></div>
-</md-content>
+  </md-content>
 </div>

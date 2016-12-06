@@ -26,10 +26,20 @@ myapp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'tickets/partials/new.html'
         })
 
+        .state('tickets.new2', {
+            url: '/new2',
+            templateUrl: 'tickets/partials/new2.html'
+        })
+
         .state('tickets.list', {
             url: '/list',
             templateUrl: 'tickets/partials/list.html'
         })
+
+        .state('tickets.ticket', {
+            url: '/ticket',
+            templateUrl: 'tickets/partials/ticket.html'
+        })        
 
         // CUSTOMERS ==========================================================
         .state('customers', {

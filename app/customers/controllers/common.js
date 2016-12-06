@@ -43,3 +43,4 @@ myapp.controller('CustomersProfileCtrl', function($scope, $rootScope, $statePara
 myapp.controller('NewCustomerCtrl', function($scope, $rootScope, CustomersService){
     $rootScope.page.title = 'Nouveau client';
 });
+

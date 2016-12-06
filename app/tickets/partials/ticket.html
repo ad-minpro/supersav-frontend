@@ -1,0 +1,35 @@
+<div flex layout-fill data-ng-controller="NewTicketCtrl">
+  <md-content layout="column" layout-fill flex class="back-light">
+
+    <header layout-align="space-between" class="header-content" hide-xs>
+      <div class="md-toolbar-tools" layout-fill>
+        <div>
+          <md-button class="md-raised md-button" ui-sref="tickets.list" aria-label="Retour">
+            <md-icon md-font-set="material-icons">arrow_back</md-icon>
+          </md-button>
+        </div>
+        <span flex></span>
+        <div>
+          <md-button class="md-button md-raised" aria-label="Modifier">
+            <md-icon md-font-set="material-icons">edit</md-icon>
+          </md-button>
+        </div>       
+      </div>
+    </header>
+
+
+    <div layout="row" layout-align="center" class="back-light md-margin">
+      <md-card flex-gt-xs="70" layout-fill class="md-margin">
+        <md-card-content layout-fill layout="column">
+            <div layout="row">
+              <h3 class="md-primary">TICKET #xxxx</h3>
+              <span flex></span>
+              <span class="md-subheader">vue ticket</span>
+            </div>
+          </md-card-content>        
+        </md-card>        
+      </md-card>
+    </div>
+
+  </md-content>
+</div>
