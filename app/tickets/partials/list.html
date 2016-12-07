@@ -1,26 +1,28 @@
 <div data-ng-controller="TicketsCommonCtrl">
   <header layout-align="space-between" class="header-content">
-    <div class="md-toolbar-tools" layout-fill>
-      <div >
+    <div class="md-toolbar-tools" layout-fill layout="row" layout-align="center center">
+      <div>
         <md-button class="md-raised" ui-sref="tickets.new">Nouveau</md-button>
       </div>
 
       <span flex></span>
-      <md-input-container flex="30" class="md-icon-float md-icon-left md-block md-caption" style="padding-bottom: 0; margin-bottom: 0;">
+
+      <md-input-container flex="50" class="md-icon-float md-icon-left md-block md-caption" style="padding-bottom: 0; margin-bottom: 0;" hide-xs>
         <md-icon md-font-set="material-icons">search</md-icon>
         <label>Recherchez un client</label>
         <input type="text" ng-model="filter.search">
       </md-input-container>
-    <span flex></span>
+
+      <span flex></span>
 
       <div>
         <md-button class="md-button md-raised" aria-label="More">
           <md-icon md-font-set="material-icons">autorenew</md-icon>
         </md-button>
-        <md-button class="md-button md-raised" aria-label="More">
+        <md-button class="md-button md-raised" aria-label="More" hide-xs>
           <md-icon md-font-set="material-icons">list</md-icon>
         </md-button>
-      </div>       
+      </div>
     </div>
   </header>
 
@@ -32,10 +34,10 @@
             <th md-column md-order-by="completed">Etat</th>
             <th md-column md-order-by="reference">#</th>
             <th md-column md-order-by="customer.full_name">Client</th>
-            <th md-column md-order-by="created">Créé</th>
-            <th md-column md-order-by="updated">Modifié</th>
-            <th md-column md-order-by="last_activity">Dernière activité</th>
-            <th md-column md-order-by="created_by">Utilisateur</th>
+            <th hide-xs hide-sm md-column md-order-by="created">Créé</th>
+            <th hide-xs hide-sm md-column md-order-by="updated">Modifié</th>
+            <th hide-xs md-column md-order-by="last_activity">Dernière activité</th>
+            <th hide-xs hide-sm md-column md-order-by="created_by">Utilisateur</th>
           </tr>
         </thead>
         <tbody md-body>
@@ -46,12 +48,14 @@
             </td>
             <td md-cell>{{item.reference}}</td>
             <td md-cell>{{item.customer.full_name}}</td>
-            <td md-cell>{{item.created | date : 'dd/MM/yy hh:mm'}}</td>
-            <td md-cell>{{item.updated | date : 'dd/MM/yy hh:mm'}}</td>
-            <td md-cell>
-              <time>{{ item.last_activity | amDateFormat: 'dddd Do MMMM YYYY - h:mm' }}</time>
+            <td hide-xs hide-sm md-cell>{{item.created | date : 'dd/MM/yy hh:mm'}}</td>
+            <td hide-xs hide-sm md-cell ng-if="item.updated!=item.created">{{item.updated | date : 'dd/MM/yy hh:mm'}}</td>
+            <td hide-xs hide-sm md-cell ng-if="item.updated==item.created">--</td>
+            <td hide-xs md-cell>
+              <!--<time>{{ item.last_activity | amDateFormat: 'dddd Do MMMM YYYY - h:mm' }}</time>-->
+              <time am-time-ago="item.last_activity"></time> 
             </td>
-            <td md-cell>
+            <td hide-xs hide-sm md-cell>
               <md-button class="md-mini md-icon-button" aria-label="More">
                 <md-icon md-font-set="material-icons">perm_identity</md-icon>
                 <md-tooltip>{{item.created_by}}</md-tooltip>                
