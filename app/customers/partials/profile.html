@@ -143,7 +143,7 @@
               </div>
               <div flex>
                 <p class="md-caption silver-font">
-                  Créé le {{data.added | date : 'dd/MM/yyyy à hh:mm'}}, dernière modification le {{data.updated | date : 'dd/MM/yyyy à hh:mm'}}
+                  Créé le {{data.added | date : 'dd/MM/yyyy à hh:mm'}}<span ng-if="data.added != data.updated">, modifié <time am-time-ago="data.updated" title="{{ data.updated | amDateFormat: 'dddd Do MMMM YYYY à hh:mm' }}"></time></span>
                 </p>
               </div>                
             </md-tab>        
