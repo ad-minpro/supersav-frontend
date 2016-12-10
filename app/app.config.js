@@ -38,7 +38,7 @@ myapp.config(function($stateProvider, $urlRouterProvider) {
 
         .state('tickets.ticket', {
             url: '/ticket',
-            templateUrl: 'tickets/partials/ticket.html'
+            templateUrl: 'tickets/partials/ticket2.html'
         })        
 
         // CUSTOMERS ==========================================================

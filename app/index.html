@@ -15,8 +15,9 @@
   <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
   <link href="node_modules/angular-material-data-table/dist/md-data-table.min.css" rel="stylesheet" type="text/css"/>
   <link rel='stylesheet' href='style.css'>
+  <!--<link rel='stylesheet' href='upload.css'>-->
 </head>
-<body ng-app="myapp" layout="row" ng-cloak >
+<body ng-app="myapp" layout="row" ng-cloak>
 
   <div ng-controller="AppCtrl" layout="row" layout-fill>
 
@@ -150,7 +151,6 @@
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js'></script>
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js'></script>
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js'></script>
-  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-touch.min.js'></script>
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.min.js'></script>
   <script src='https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js'></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.js"></script>
@@ -182,6 +182,11 @@
   <!-- load angular-moment -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular-moment/1.0.0/angular-moment.min.js"></script>
 
+  <!-- Angular File Upload -->
+  <script src="/node_modules/angular-file-upload/dist/angular-file-upload.min.js"></script>
+
+  <!-- Flow (Upload) -->
+  <script src="/bower_components/ng-flow/dist/ng-flow-standalone.min.js"></script>
 
   <!-- Angular UI Bootsrap -->
   <!--
@@ -200,6 +205,7 @@
   <script src="/customers/controllers/common.js"></script>
   <script src="/tickets/controllers/common.js"></script>
   <script src="/tickets/controllers/new.js"></script>
+  <script src="/tickets/controllers/ticket.js"></script>
   <script src="/todo/controllers/todo.js"></script>
   <script src="/contacts/controllers/common.js"></script>
   <script src="/proceedings/controllers/common.js"></script>
@@ -210,6 +216,7 @@
 
     <!-- Directives -->
   <script src="/common/directives/common.js"></script>
+  <script src="/tickets/directives/ticket.js"></script>
 
   
 
